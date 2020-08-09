@@ -17,7 +17,7 @@ public class Mecz {
 
     @ManyToOne
     @JoinColumn(name = "kolejka_id", nullable = false)
-    private int idKolejki;
+    private int kolejkaId;
 
     @Column(name = "host_team")
     private String hostTeam;
