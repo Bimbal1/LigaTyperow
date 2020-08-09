@@ -25,4 +25,20 @@ public class Kolejka {
 
     @Column(name = "wyniki")
     private String wyniki;
+
+//    public void setWyniki(String wyniki) {
+//        StringBuilder sb = new StringBuilder();
+//        for(Mecz mecz : mecze) {
+//            String[] temp = mecz.getWynik().split(":");
+//            int a = Integer.parseInt(temp[0]);
+//            int b = Integer.parseInt(temp[1]);
+//            if(a > b) {
+//                sb.append('1');
+//            } else if(a == b) {
+//                sb.append('x');
+//            } else {
+//                sb.append('2');
+//            }
+//        }
+//    }
 }

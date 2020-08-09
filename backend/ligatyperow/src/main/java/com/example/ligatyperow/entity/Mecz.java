@@ -31,4 +31,7 @@ public class Mecz {
     @Column(name = "wynik")
     private String wynik;
 
+    public String getWynik() {
+        return this.wynik;
+    }
 }
