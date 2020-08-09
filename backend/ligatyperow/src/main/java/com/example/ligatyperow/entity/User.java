@@ -1,9 +1,14 @@
 package com.example.ligatyperow.entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "table")
+@Table(name = "user")
+@Getter
+@Setter
 public class User {
 
     @Id
@@ -17,9 +22,12 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "password")
+    private String password;
+
     @Column(name = "pkt")
     private int pkt;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idUser")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
     private Typy[] historiaTypow;
 }

@@ -20,7 +20,7 @@ public class Kolejka {
     @Column(name = "data_kolejki")
     private Date dataKolejki;
 
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "idKolejki")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "kolejka")
     private Mecz[] mecze;
 
     @Column(name = "wyniki")

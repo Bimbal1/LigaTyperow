@@ -16,12 +16,12 @@ public class Typy {
     @Column(name = "id")
     private long id;
 
-    @JoinColumn(name = "kolejka_id")
+    @Column(name = "kolejka_id")
     private long idKolejki;
 
-    @JoinColumn(name = "id_user", nullable = false)
     @ManyToOne()
-    private long idUser;
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
     @Column(name = "typy")
     private String typy;
