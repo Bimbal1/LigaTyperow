@@ -13,11 +13,11 @@ public class Mecz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @ManyToOne
     @JoinColumn(name = "kolejka_id", nullable = false)
-    private int kolejkaId;
+    private long kolejkaId;
 
     @Column(name = "host_team")
     private String hostTeam;

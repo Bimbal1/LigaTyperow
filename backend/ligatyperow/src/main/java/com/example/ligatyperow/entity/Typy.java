@@ -14,14 +14,14 @@ public class Typy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int id;
+    private long id;
 
     @JoinColumn(name = "kolejka_id")
-    private int idKolejki;
+    private long idKolejki;
 
     @JoinColumn(name = "id_user", nullable = false)
     @ManyToOne()
-    private int idUser;
+    private long idUser;
 
     @Column(name = "typy")
     private String typy;
