@@ -19,7 +19,8 @@ public class Typy {
     @JoinColumn(name = "kolejka_id")
     private int idKolejki;
 
-    @Column(name = "id_user")
+    @JoinColumn(name = "id_user", nullable = false)
+    @ManyToOne()
     private int idUser;
 
     @Column(name = "typy")
