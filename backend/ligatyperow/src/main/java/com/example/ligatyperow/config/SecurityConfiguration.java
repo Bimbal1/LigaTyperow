@@ -11,6 +11,10 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     public void configure(WebSecurity web) throws Exception {
         web
                 .ignoring()
-                .antMatchers("/h2-console/**");
+                .antMatchers("/h2-console/**")
+                .antMatchers("/users/**")
+                .antMatchers("/kolejki/**")
+                .antMatchers("/mecze/**")
+                .antMatchers("/typy/**");                ;
     }
 }

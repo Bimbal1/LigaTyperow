@@ -16,7 +16,7 @@ public class Mecz {
     private long id;
 
     @ManyToOne
-    @JoinColumn(name = "kolejka_id", nullable = false)
+    @JoinColumn(name = "kolejka_id")
     private Kolejka kolejka;
 
     @Column(name = "host_team")
@@ -33,5 +33,9 @@ public class Mecz {
 
     public String getWynik() {
         return this.wynik;
+    }
+
+    public Date getDataMeczu() {
+        return this.dataMeczu;
     }
 }

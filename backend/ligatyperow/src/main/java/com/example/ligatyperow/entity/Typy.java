@@ -16,8 +16,9 @@ public class Typy {
     @Column(name = "id")
     private long id;
 
-    @Column(name = "kolejka_id")
-    private long idKolejki;
+    @ManyToOne
+    @JoinColumn(name = "kolejka_id", nullable = false)
+    private Kolejka kolejka;
 
     @ManyToOne()
     @JoinColumn(name = "user_id", nullable = false)
@@ -28,4 +29,20 @@ public class Typy {
 
     @Column(name = "punkty")
     private int punkty;
+
+    public void setPunkty() {
+        char[] typyChars = this.typy.toCharArray();
+        char[] wynikiChars = this.kolejka.getWyniki().toCharArray();
+        int punkty = 0;
+        for(int i = 0; i < typyChars.length; i++) {
+            if(typyChars[i] == wynikiChars[i]) {
+                punkty++;
+            }
+        }
+        this.punkty = punkty;
+    }
+
+    public int getPunkty() {
+        return this.punkty;
+    }
 }

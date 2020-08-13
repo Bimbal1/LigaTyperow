@@ -25,7 +25,8 @@ CREATE TABLE `typy` (
     `kolejka_id` int NOT NULL,
     `user_id` int NOT NULL,
     `typy` varchar(10) NOT NULL,
-    `punkty` int NOT NULL,
+    `punkty` int,
+    FOREIGN KEY (`kolejka_id`) REFERENCES `kolejka` (`kolejka_id`),
     FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`)
 );
 
